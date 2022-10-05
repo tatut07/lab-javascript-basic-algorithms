@@ -32,9 +32,9 @@ console.log(hacker2reversed);
 hacker1 = hacker1.toLowerCase();
 hacker2 = hacker2.toLowerCase();
 if (hacker1 > hacker2) {
-  console.log("The driver's name goes first.");
-} else if (hacker1 < hacker2) {
   console.log("Yo, the navigator goes first definitely.");
+} else if (hacker1 < hacker2) {
+  console.log("The driver's name goes first.");
 } else {
   console.log("What?! You both have the same name?");
 }
