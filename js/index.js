@@ -54,11 +54,27 @@ for (let i = 0; i < splitParagraph.length; i++) {
 }
 console.log(wordCount);
 console.log(etCount);
-
-let phraseToCheck = "race car";
-let wordReversed = "";
-for (let i = phraseToCheck - 1; i >= 0; i--) {
-  const reversed = wordReversed[i];
-  wordReversed += reversed;
+const phraseToCheck = "Amor, Roma"
+let forwardString = ``;
+let backwardString = ``;
+for (let i = 0; i < phraseToCheck.length; i++) {
+ const char = phraseToCheck[i];
+ if (char === " " || char === "." || char ==="!" || char ==="?" || char === "'"){
+    continue;
+ } else {
+    forwardString += char;
+ } 
+for (let j = phraseToCheck.length - 1; j>= 0; j--){
+    const char2 = phraseToCheck[j];
+    if (char === " " || char === "." || char ==="!" || char ==="?" || char === "'"){
+    continue;
+    } else {
+    backwardString += char;
+ } 
+ let lowerCaseForwardString = forwardString.toLowerCase();
+ let lowerCaseBackwardString = backwardString.toLowerCase();
+if (lowerCaseForwardString === lowerCaseBackwardString) {
+    console.log(`${phraseToCheck} is a Palindrome`);
+}else  {
+    console.log(`${phraseToCheck} is not a Palindrome`);
 }
-console.log(wordReversed);
