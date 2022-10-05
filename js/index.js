@@ -36,3 +36,29 @@ if (hacker1 > hacker2) {
 } else {
   console.log("What?! You both have the same name?");
 }
+const paragraph = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porttitor nibh vitae mattis gravida. Vestibulum cursus iaculis tortor vel ultricies. Cras in orci lobortis, molestie tellus quis, laoreet ex. Fusce pulvinar commodo nibh. Nullam sed odio dui. Nullam maximus pretium nisl, nec pulvinar turpis consequat eget. Pellentesque aliquet lectus faucibus felis viverra gravida. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce consequat rhoncus diam. Sed faucibus purus vitae ornare pretium. Fusce et ipsum molestie, rhoncus est ut, commodo ante. Donec nec ligula erat.\n
+Sed feugiat posuere sem at mattis. Suspendisse massa risus, bibendum ut euismod eget, tempor eu nisi. Praesent lobortis quam sit amet vehicula vestibulum. Maecenas nec ipsum magna. Fusce fringilla neque eget iaculis efficitur. Mauris commodo lacus quis enim vehicula feugiat. Cras lobortis nulla quam, nec tincidunt quam commodo quis. Nullam eget lorem ut velit vestibulum faucibus et a nibh. Maecenas purus ipsum, cursus vel ante et, facilisis fermentum nibh. Nulla quis rhoncus leo. Donec et arcu elementum, ornare odio id, lacinia nibh. Ut mollis ornare dui at euismod. Nulla risus lorem, porta et dictum vel, molestie vel erat. Quisque faucibus hendrerit nunc, id pretium quam sollicitudin in. Quisque auctor lorem non est vehicula elementum.\n
+Proin lacinia diam et tempor aliquam. Nam auctor sem eget erat vestibulum porta. Aliquam risus urna, convallis et finibus id, hendrerit a ante. Donec viverra tempus ligula, non faucibus nibh. Aenean finibus, lacus eget feugiat luctus, enim purus sollicitudin odio, vitae ultrices elit tortor eget eros. Ut eu libero pretium nisl gravida laoreet et sed felis. Duis vitae orci eget dui molestie lacinia non nec lacus. Proin ullamcorper, quam vel tincidunt dignissim, nunc est maximus lectus, a blandit tortor quam non ligula. Sed vel quam et turpis malesuada vestibulum. Nullam ultrices dui vel ornare sollicitudin. Proin semper feugiat mauris, nec facilisis arcu aliquam sit amet. Vivamus in aliquam metus. Curabitur venenatis sem id justo lacinia lacinia. Pellentesque porttitor tincidunt lorem vitae tristique. Suspendisse magna risus, ultricies id enim a, rutrum vehicula nunc. Curabitur sit amet lectus at lorem convallis mollis a a tellus.`;
+console.log(paragraph);
+
+let wordCount = 0;
+let etCount = 0;
+let splitParagraph = paragraph.split(" ");
+for (let i = 0; i < splitParagraph.length; i++) {
+  if (splitParagraph[i].includes("\n")) {
+    wordCount++;
+  } else if (splitParagraph[i] === "et" || splitParagraph[i] === "et.") {
+    etCount++;
+  }
+  wordCount++;
+}
+console.log(wordCount);
+console.log(etCount);
+
+let phraseToCheck = "race car";
+let wordReversed = "";
+for (let i = phraseToCheck - 1; i >= 0; i--) {
+  const reversed = wordReversed[i];
+  wordReversed += reversed;
+}
+console.log(wordReversed);
