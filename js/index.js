@@ -29,8 +29,6 @@ for (let hack2 = hacker2.length - 1; hack2 >= 0; hack2--) {
   hacker2reversed += hacker2[hack2];
 }
 console.log(hacker2reversed);
-hacker1 = hacker1.toLowerCase();
-hacker2 = hacker2.toLowerCase();
 if (hacker1 > hacker2) {
   console.log("The driver's name goes first.");
 } else if (hacker1 < hacker2) {
