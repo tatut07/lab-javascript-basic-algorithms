@@ -78,3 +78,4 @@ if (lowerCaseForwardString === lowerCaseBackwardString) {
 }else  {
     console.log(`${phraseToCheck} is not a Palindrome`);
 }
+}}
